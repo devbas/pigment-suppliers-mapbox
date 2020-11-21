@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<!-- <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+
+  .marker {
+    background-image: url('images/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmFzdGlhbmdlbmV1Z2VsaWprIiwiYSI6ImNpc3NzbHB3bTAwMHYydG56amh6eDVmZW0ifQ.XfPts3nU26flYnaZ3DRquA';
+
+var map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/bastiangeneugelijk/ckhnw1ybo19g619p4wckyjkds',
+  center: [52.091259, 5.122750],
+  zoom: 6
+});
+  
+// L.mapbox.accessToken = 'pk.eyJ1IjoiYmFzdGlhbmdlbmV1Z2VsaWprIiwiYSI6ImNpc3NzbHB3bTAwMHYydG56amh6eDVmZW0ifQ.XfPts3nU26flYnaZ3DRquA';
+// var map = L.mapbox.map('map')
+//     .setView([52.091259, 5.122750], 6)
+//     .addLayer(L.mapbox.styleLayer('mapbox://styles/bastiangeneugelijk/ckhnw1ybo19g619p4wckyjkds'));
+
+
+var geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.52000659999999, 13.404954 ] },
+      properties: {
+        title: 'Heyl Beringer ',
+        supplier_level: '3',
+        specialized: 'n',
+        talens_specialized_order: 'n',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.9795715, 10.3146872 ] },
+      properties: {
+        title: 'Arzberger',
+        supplier_level: '3',
+        specialized: 'n',
+        talens_specialized_order: 'n',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.7758459, 9.1829321 ] },
+      properties: {
+        title: 'Siegle',
+        supplier_level: '3',
+        specialized: 'n',
+        talens_specialized_order: 'n',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.44897899999999, 3.428713 ] },
+      properties: {
+        title: "Blue d'outremer",
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 49.1249712, 8.5844107 ] },
+      properties: {
+        title: 'Katzauer',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.4347311, 7.6693082 ] },
+      properties: {
+        title: 'Grenzhausen',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.5073509, -0.1277583 ] },
+      properties: {
+        title: 'L.Berger',
+        supplier_level: '3',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Bruno Lampel',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.0399087, 12.0039306 ] },
+      properties: {
+        title: 'Wunsiedel',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.1205333, 11.6276237 ] },
+      properties: {
+        title: 'Trautmann',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.0492047, 10.2194227 ] },
+      properties: {
+        title: 'Sattler',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.29993, 7.6042046 ] },
+      properties: {
+        title: 'Schroeder und Stadelmann',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.856614, 2.3522219 ] },
+      properties: {
+        title: 'Lefranc & Co',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Ultramarinfabrik',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.7753455, 6.083886800000001 ] },
+      properties: {
+        title: 'Vossen',
+        supplier_level: '3',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.990181, 1.912178 ] },
+      properties: {
+        title: 'Jacques & Co',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.59549010000001, 12.6386475 ] },
+      properties: {
+        title: 'Geitner und Co',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.14529599999999, 8.3881459 ] },
+      properties: {
+        title: 'Michell und Morell',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.3396955, 12.3730747 ] },
+      properties: {
+        title: 'Hauptblaufarbenfabrik',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 49.4874592, 8.466039499999999 ] },
+      properties: {
+        title: 'Thies und Roth',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.2041968, 6.6879511 ] },
+      properties: {
+        title: 'Vossen',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.165691, 10.451526 ] },
+      properties: {
+        title: 'C.W. Voigt Neuwerk',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3675734, 4.9041389 ] },
+      properties: {
+        title: 'Vettewinkel',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.912259, 2.384049 ] },
+      properties: {
+        title: 'Rambant',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.4922345, 9.600143899999999 ] },
+      properties: {
+        title: 'Habich und Soehne ',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.5073509, -0.1277583 ] },
+      properties: {
+        title: 'Bongers de Rath',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Sachtleben',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.3396955, 12.3730747 ] },
+      properties: {
+        title: 'Springer und Moeller',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.0543422, 3.7174243 ] },
+      properties: {
+        title: 'E.Guimet Sas',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.4420399, 4.8291993 ] },
+      properties: {
+        title: 'P.Schoen',
+        supplier_level: '3',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.1913202, 5.9877715 ] },
+      properties: {
+        title: 'Dr. Haagen',
+        supplier_level: '3',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 45.1829744,1.3842055 ] },
+      properties: {
+        title: 'A. De Laborderie',
+        supplier_level: '3',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.9244201, 4.4777326 ] },
+      properties: {
+        title: 'W. van Houten en Zoon',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3675734, 4.9041389 ] },
+      properties: {
+        title: 'M.Hafkenscheid en Zoon',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 46.6364598, 14.3122246 ] },
+      properties: {
+        title: 'Bleiberger Bergwerke',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Bern Kahn und Co',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.1351253, 11.5819805 ] },
+      properties: {
+        title: 'Michael Huber',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.21115700000001, 5.9699231 ] },
+      properties: {
+        title: 'Remmert',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3873878, 4.6462194 ] },
+      properties: {
+        title: 'Haarlemsche Stoomverffabriek',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.0704978, 4.3006999 ] },
+      properties: {
+        title: 'Van den doel ',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Koel und Spitz',
+        supplier_level: '2',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.0399159, 8.1551905 ] },
+      properties: {
+        title: 'Broekhues N. Walluf',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.3396955, 12.3730747 ] },
+      properties: {
+        title: 'Herm. Wilhelm',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.9684314, 4.4995322 ] },
+      properties: {
+        title: 'Gerrit Boogaerd',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.2985491,3.0633587 ] },
+      properties: {
+        title: 'Couleurs dÓutremer',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 49.9764195, 8.0560682 ] },
+      properties: {
+        title: 'Olt. Hennig',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3675734, 4.9041389 ] },
+      properties: {
+        title: 'Keyser & Mackay',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.4420399, 4.8291993 ] },
+      properties: {
+        title: 'N.V. Heyne Vis en Zoon',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.8513682, 5.6909725 ] },
+      properties: {
+        title: 'Rocour',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.937531, 6.9602786 ] },
+      properties: {
+        title: 'Rasquin',
+        supplier_level: '3',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.62925, 3.057256 ] },
+      properties: {
+        title: 'R.Richter',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.0504088, 13.7372621 ] },
+      properties: {
+        title: 'Gleitsmann',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 43.548473, 10.3105674 ] },
+      properties: {
+        title: 'Ganni & Co',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.856614, 2.3522219 ] },
+      properties: {
+        title: 'Couleurs Paris',
+        supplier_level: '2',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 49.4969642, 11.7554254 ] },
+      properties: {
+        title: 'Appolt',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.52000659999999, 13.404954 ] },
+      properties: {
+        title: 'Wicke',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.09073739999999, 5.1214201 ] },
+      properties: {
+        title: 'Greve',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.4740433, 4.8028179 ] },
+      properties: {
+        title: 'Latenstein',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3675734, 4.9041389 ] },
+      properties: {
+        title: 'Hofman & Volkers',
+        supplier_level: '2',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 58.438936, -3.093716 ] },
+      properties: {
+        title: 'Golden Valley',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.14529599999999, 8.3881459 ] },
+      properties: {
+        title: 'F. Ruckselshausen',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.0035483, 12.0899816 ] },
+      properties: {
+        title: 'Fikentscher',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.3675734, 4.9041389 ] },
+      properties: {
+        title: 'Kroon & Co',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.0504088, 13.7372621 ] },
+      properties: {
+        title: 'Otto Baer',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 50.8513682, 5.6909725 ] },
+      properties: {
+        title: 'Ten Hoorn',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.2737893, 5.1663871 ] },
+      properties: {
+        title: 'H. Husolf',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.9244201, 4.4777326 ] },
+      properties: {
+        title: 'Chr. Zeegers',
+        supplier_level: '1',
+        specialized: 'N',
+        talens_specialized_order: 'N',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.9851034, 5.898729599999999 ] },
+      properties: {
+        title: 'N.V. Defa',
+        supplier_level: '3',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.0504088, 13.7372621 ] },
+      properties: {
+        title: 'Curt Balke',
+        supplier_level: '1',
+        specialized: 'N.I.',
+        talens_specialized_order: 'N.I.',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.58525280000001, 5.056375 ] },
+      properties: {
+        title: 'Franken Donders',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 51.46092179999999, -0.373149 ] },
+      properties: {
+        title: 'William Bros',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 47.5595986, 7.5885761 ] },
+      properties: {
+        title: 'Gesellschaft für chemische Industrie',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 52.01157689999999, 4.3570677 ] },
+      properties: {
+        title: 'Ned. Verf & Chem. Fabr.',
+        supplier_level: '2',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'Y'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 47.5595986, 7.5885761 ] },
+      properties: {
+        title: 'Geigy',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 48.936181, 2.357443 ] },
+      properties: {
+        title: 'Matieres Colour & Prod. ',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: { type: 'Point', coordinates: [ 53.4807593, -2.2426305 ] },
+      properties: {
+        title: 'Alliance colour & chem',
+        supplier_level: '1',
+        specialized: 'Y',
+        talens_specialized_order: 'Y',
+        main_supplier_sops: 'N'
+      }
+    }
+  ]
+}
+
+// add markers to map
+geojson.features.forEach(function(marker) {
+  console.log(marker.geometry.coordinates)
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  var classname = 'custom-marker-'
+
+  /*
+
+    .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops
+    .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops
+    .custom-marker-low_supplier-is_specialized-
+  */
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+
+    var props = marker.properties
+
+    if(props.supplier_level === 1) {
+      classname = classname + 'low_supplier-'
+    } else if(props.supplier_level === 2) {
+      classname = classname + 'intermediate_supplier-'
+    } else if(props.supplier_level === 3) {
+      classname = classname + 'high_supplier-'
+    } else {
+      console.log(`Supplier level not found for ${props}`)
+    }
+
+    if(props.specialized === 'Y') {
+      classname = classname + 'is_specialized-'
+    } else if(props.specialized === 'N') {
+      classname = classname + 'is_not_specialized-'
+    } else {
+      console.log(`Specialized not found for: ${props}`)
+    }
+
+    if(props.talens_specialized_order === 'Y') {
+      classname = classname + 'is_talens_specialized_order-'
+    } else if(props.talens_specialized_order === 'N') {
+      classname = classname + 'is_not_talens_specialized_order-'
+    } else {
+      console.log(`talens specialized order not found for ${props}`)
+    }
+
+    if(props.main_supplier_sops === 'Y') {
+      classname = classname + 'is_main_supplier_sops'
+    } else if(props.main_supplier_sops === 'N') {
+      classname = classname + 'is_not_main_supplier_sops'
+    } else  {
+      console.log(`main supplier sops not found for ${props}`)
+    }
+
+    .setLngLat([marker.geometry.coordinates[1], marker.geometry.coordinates[0]])
+    .addTo(map);
+});
+
+
+</script>
+
+</body>
+</html>
+
