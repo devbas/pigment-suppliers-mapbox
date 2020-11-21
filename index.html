@@ -901,45 +901,44 @@ geojson.features.forEach(function(marker) {
     .custom-marker-low_supplier-is_specialized-
   */
 
+  var props = marker.properties
+
+  if(props.supplier_level === 1) {
+    classname = classname + 'low_supplier-'
+  } else if(props.supplier_level === 2) {
+    classname = classname + 'intermediate_supplier-'
+  } else if(props.supplier_level === 3) {
+    classname = classname + 'high_supplier-'
+  } else {
+    console.log(`Supplier level not found for ${props}`)
+  }
+
+  if(props.specialized === 'Y') {
+    classname = classname + 'is_specialized-'
+  } else if(props.specialized === 'N') {
+    classname = classname + 'is_not_specialized-'
+  } else {
+    console.log(`Specialized not found for: ${props}`)
+  }
+
+  if(props.talens_specialized_order === 'Y') {
+    classname = classname + 'is_talens_specialized_order-'
+  } else if(props.talens_specialized_order === 'N') {
+    classname = classname + 'is_not_talens_specialized_order-'
+  } else {
+    console.log(`talens specialized order not found for ${props}`)
+  }
+
+  if(props.main_supplier_sops === 'Y') {
+    classname = classname + 'is_main_supplier_sops'
+  } else if(props.main_supplier_sops === 'N') {
+    classname = classname + 'is_not_main_supplier_sops'
+  } else  {
+    console.log(`main supplier sops not found for ${props}`)
+  }
+
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
-
-    var props = marker.properties
-
-    if(props.supplier_level === 1) {
-      classname = classname + 'low_supplier-'
-    } else if(props.supplier_level === 2) {
-      classname = classname + 'intermediate_supplier-'
-    } else if(props.supplier_level === 3) {
-      classname = classname + 'high_supplier-'
-    } else {
-      console.log(`Supplier level not found for ${props}`)
-    }
-
-    if(props.specialized === 'Y') {
-      classname = classname + 'is_specialized-'
-    } else if(props.specialized === 'N') {
-      classname = classname + 'is_not_specialized-'
-    } else {
-      console.log(`Specialized not found for: ${props}`)
-    }
-
-    if(props.talens_specialized_order === 'Y') {
-      classname = classname + 'is_talens_specialized_order-'
-    } else if(props.talens_specialized_order === 'N') {
-      classname = classname + 'is_not_talens_specialized_order-'
-    } else {
-      console.log(`talens specialized order not found for ${props}`)
-    }
-
-    if(props.main_supplier_sops === 'Y') {
-      classname = classname + 'is_main_supplier_sops'
-    } else if(props.main_supplier_sops === 'N') {
-      classname = classname + 'is_not_main_supplier_sops'
-    } else  {
-      console.log(`main supplier sops not found for ${props}`)
-    }
-
     .setLngLat([marker.geometry.coordinates[1], marker.geometry.coordinates[0]])
     .addTo(map);
 });
