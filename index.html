@@ -8,16 +8,17 @@
 <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+<link href='./labels.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
   #map { position:absolute; top:0; bottom:0; width:100%; }
 
   .marker {
-    background-image: url('images/mapbox-icon.png');
+    /* background-image: url('images/mapbox-icon.png'); */
     background-size: cover;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    /* width: 50px; */
+    /* height: 50px; */
+    /* border-radius: 50%; */
     cursor: pointer;
   }
 </style>
@@ -36,12 +37,6 @@ var map = new mapboxgl.Map({
   center: [5.122750, 52.091259],
   zoom: 5
 });
-  
-// L.mapbox.accessToken = 'pk.eyJ1IjoiYmFzdGlhbmdlbmV1Z2VsaWprIiwiYSI6ImNpc3NzbHB3bTAwMHYydG56amh6eDVmZW0ifQ.XfPts3nU26flYnaZ3DRquA';
-// var map = L.mapbox.map('map')
-//     .setView([52.091259, 5.122750], 6)
-//     .addLayer(L.mapbox.styleLayer('mapbox://styles/bastiangeneugelijk/ckhnw1ybo19g619p4wckyjkds'));
-
 
 var geojson = {
   type: 'FeatureCollection',
@@ -50,11 +45,12 @@ var geojson = {
       type: 'Feature',
       geometry: { type: 'Point', coordinates: [ 52.52000659999999, 13.404954 ] },
       properties: {
-        title: 'Heyl Beringer ',
+        title: '﻿Heyl Beringer ',
         supplier_level: '3',
         specialized: 'n',
         talens_specialized_order: 'n',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -65,7 +61,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'n',
         talens_specialized_order: 'n',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -76,7 +73,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'n',
         talens_specialized_order: 'n',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -87,7 +85,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -98,7 +97,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -109,7 +109,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -120,7 +121,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -131,7 +133,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -142,7 +145,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -153,7 +157,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -164,7 +169,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -175,7 +181,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -186,7 +193,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -197,7 +205,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -208,7 +217,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -219,7 +229,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -230,7 +241,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -241,7 +253,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -252,7 +265,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -263,7 +277,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -274,7 +289,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -285,7 +301,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -296,7 +313,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -307,7 +325,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -318,7 +337,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -329,7 +349,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -340,7 +361,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -351,7 +373,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -362,7 +385,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -373,7 +397,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -384,7 +409,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -395,7 +421,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -406,7 +433,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -417,7 +445,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -428,7 +457,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -439,7 +469,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -450,7 +481,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -461,7 +493,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -472,7 +505,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -483,7 +517,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -494,7 +529,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -505,7 +541,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -516,7 +553,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -527,7 +565,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -538,7 +577,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -549,7 +589,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -560,7 +601,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -571,7 +613,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -582,7 +625,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -593,7 +637,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -604,7 +649,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -615,7 +661,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -626,7 +673,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -637,7 +685,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -648,7 +697,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -659,7 +709,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -670,7 +721,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -681,7 +733,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -692,7 +745,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -703,7 +757,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -714,7 +769,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -725,7 +781,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -736,7 +793,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -747,7 +805,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -758,7 +817,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -769,7 +829,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -780,7 +841,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N',
         talens_specialized_order: 'N',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -791,7 +853,8 @@ var geojson = {
         supplier_level: '3',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'N '
       }
     },
     {
@@ -802,7 +865,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'N.I.',
         talens_specialized_order: 'N.I.',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'N.I.'
       }
     },
     {
@@ -813,7 +877,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -824,7 +889,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -835,7 +901,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -846,7 +913,8 @@ var geojson = {
         supplier_level: '2',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'Y'
+        main_supplier_sops: 'Y',
+        manufacturer: 'Y'
       }
     },
     {
@@ -857,7 +925,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -868,7 +937,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     },
     {
@@ -879,7 +949,8 @@ var geojson = {
         supplier_level: '1',
         specialized: 'Y',
         talens_specialized_order: 'Y',
-        main_supplier_sops: 'N'
+        main_supplier_sops: 'N',
+        manufacturer: 'Y'
       }
     }
   ]
@@ -887,27 +958,16 @@ var geojson = {
 
 // add markers to map
 geojson.features.forEach(function(marker) {
-  console.log(marker.geometry.coordinates)
-  // create a HTML element for each feature
-  var el = document.createElement('div');
-  el.className = 'marker';
 
-  var classname = 'custom-marker-'
-
-  /*
-
-    .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops
-    .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops
-    .custom-marker-low_supplier-is_specialized-
-  */
+  var classname = 'marker custom-marker-'
 
   var props = marker.properties
 
-  if(props.supplier_level === 1) {
+  if(props.supplier_level === '1') {
     classname = classname + 'low_supplier-'
-  } else if(props.supplier_level === 2) {
+  } else if(props.supplier_level === '2') {
     classname = classname + 'intermediate_supplier-'
-  } else if(props.supplier_level === 3) {
+  } else if(props.supplier_level === '3') {
     classname = classname + 'high_supplier-'
   } else {
     console.log(`Supplier level not found for ${props}`)
@@ -930,12 +990,25 @@ geojson.features.forEach(function(marker) {
   }
 
   if(props.main_supplier_sops === 'Y') {
-    classname = classname + 'is_main_supplier_sops'
+    classname = classname + 'is_main_supplier_sops-'
   } else if(props.main_supplier_sops === 'N') {
-    classname = classname + 'is_not_main_supplier_sops'
+    classname = classname + 'is_not_main_supplier_sops-'
   } else  {
     console.log(`main supplier sops not found for ${props}`)
   }
+
+  if(props.manufacturer === 'Y') {
+    classname = classname + 'is_manufacturer'
+  } else if(props.manufacturer === 'N') {
+    classname = classname + 'is_not_manufacturer'
+  } else {
+    console.log(`manufacturer not found for ${props}`)
+  }
+
+  console.log(marker.geometry.coordinates)
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = classname;
 
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)

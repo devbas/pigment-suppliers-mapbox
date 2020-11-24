@@ -25,6 +25,7 @@ fs.createReadStream('data.csv')
         feature.properties.specialized = csvrow[8]; 
         feature.properties.talens_specialized_order = csvrow[9];
         feature.properties.main_supplier_sops = csvrow[10];
+        feature.properties.manufacturer = csvrow[4];
 
         // console.log(csvrow);
         //do something with csvrow
