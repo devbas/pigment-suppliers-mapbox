@@ -1,194 +1,332 @@
 .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__not_main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__not_main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-low_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 30px; 
   height: 30px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__not_main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
 
 .custom-marker-intermediate_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
-  background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
   width: 40px; 
   height: 40px;
 }
+
+.custom-marker-high_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ Yes\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__not_specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__not_specialized__talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_not_talens_specialized_order-is_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_manufacturer {
+  background-image: url('images/manufacturer__not_specialized__not_talens_specialized_order__not_main_supplier_sops.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+
+.custom-marker-high_supplier-is_not_specialized-is_not_talens_specialized_order-is_not_main_supplier_sops-is_not_manufacturer {
+  background-image: url('images/not_manufacturer__not_specialized__not_talens_specialized_order__not_main_sops_supplier.png');
+  /* background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png'); */
+  width: 50px; 
+  height: 50px;
+}
+/* }
 .custom-marker-high_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
   background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
   width: 50px; 
@@ -283,4 +421,4 @@
   background-image: url('images/Specialized\ No\ -\ Not\ sold\ as\ Specs\ -\ Is\ Not\ Manufacturer\ -\ Is\ Not\ Sops\ Supplier.png');
   width: 50px; 
   height: 50px;
-}
+} */
