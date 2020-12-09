@@ -6,8 +6,8 @@
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <!-- <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' /> -->
-<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
 <link href='./labels.css' rel='stylesheet' />
 <style>
   body { margin:0; padding:0; }
@@ -854,7 +854,7 @@ var geojson = {
         specialized: 'Y',
         talens_specialized_order: 'Y',
         main_supplier_sops: 'Y',
-        manufacturer: 'N '
+        manufacturer: 'N'
       }
     },
     {
@@ -956,6 +956,24 @@ var geojson = {
   ]
 }
 
+// map.on('load', function () {
+//   map.addSource('places', {
+//     type: 'geojson',
+//     data: geojson
+//   })
+
+//   map.addLayer({
+//     'id': 'places', 
+//     'type': 'symbol', 
+//     'source': 'places', 
+//     'layout': { 
+//       'icon-image': '{icon}-15', 
+//       'icon-allow-overlap': true
+//     }
+//   })
+// })
+
+// const util = require('util')
 // add markers to map
 geojson.features.forEach(function(marker) {
 
@@ -970,39 +988,44 @@ geojson.features.forEach(function(marker) {
   } else if(props.supplier_level === '3') {
     classname = classname + 'high_supplier-'
   } else {
-    console.log(`Supplier level not found for ${props}`)
+    // classname = 'marker custom-marker-unknown'
+    console.log(`Supplier level not found for ${JSON.stringify(props, null, 4)}`)
   }
 
-  if(props.specialized === 'Y') {
+  if(props.specialized.toUpperCase() === 'Y') {
     classname = classname + 'is_specialized-'
-  } else if(props.specialized === 'N') {
+  } else if(props.specialized.toUpperCase() === 'N') {
     classname = classname + 'is_not_specialized-'
   } else {
-    console.log(`Specialized not found for: ${props}`)
+    classname = classname + 'unknown-'
+    // console.log(`Specialized not found for: ${JSON.stringify(props, null, 4)}`)
   }
 
-  if(props.talens_specialized_order === 'Y') {
+  if(props.talens_specialized_order.toUpperCase() === 'Y') {
     classname = classname + 'is_talens_specialized_order-'
-  } else if(props.talens_specialized_order === 'N') {
+  } else if(props.talens_specialized_order.toUpperCase() === 'N') {
     classname = classname + 'is_not_talens_specialized_order-'
   } else {
-    console.log(`talens specialized order not found for ${props}`)
+    classname = classname + 'unknown-'
+    // console.log(`talens specialized order not found for ${JSON.stringify(props, null, 4)}`)
   }
 
-  if(props.main_supplier_sops === 'Y') {
+  if(props.main_supplier_sops.toUpperCase() === 'Y') {
     classname = classname + 'is_main_supplier_sops-'
-  } else if(props.main_supplier_sops === 'N') {
+  } else if(props.main_supplier_sops.toUpperCase() === 'N') {
     classname = classname + 'is_not_main_supplier_sops-'
   } else  {
-    console.log(`main supplier sops not found for ${props}`)
+    classname = classname + 'unknown-'
+    // console.log(`main supplier sops not found for ${JSON.stringify(props, null, 4)}`)
   }
 
-  if(props.manufacturer === 'Y') {
+  if(props.manufacturer.toUpperCase() === 'Y') {
     classname = classname + 'is_manufacturer'
-  } else if(props.manufacturer === 'N') {
+  } else if(props.manufacturer.toUpperCase() === 'N') {
     classname = classname + 'is_not_manufacturer'
   } else {
-    console.log(`manufacturer not found for ${props}`)
+    classname = classname + 'unknown'
+    // console.log(`manufacturer not found for ${JSON.stringify(props, null, 4)}`)
   }
 
   console.log(marker.geometry.coordinates)
@@ -1013,6 +1036,7 @@ geojson.features.forEach(function(marker) {
   // make a marker for each feature and add to the map
   new mapboxgl.Marker(el)
     .setLngLat([marker.geometry.coordinates[1], marker.geometry.coordinates[0]])
+    // .setPopup(popup)
     .addTo(map);
 });
 

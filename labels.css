@@ -326,6 +326,42 @@
   width: 30px; 
   height: 30px;
 }
+
+.custom-marker-low_supplier-unknown-unknown-unknown-unknown {
+  background-image: url('images/unknown.png');
+  width: 20px; 
+  height: 20px;
+}
+
+.custom-marker-intermediate_supplier-unknown-unknown-unknown-unknown {
+  background-image: url('images/unknown.png');
+  width: 25px; 
+  height: 25px;
+}
+
+.custom-marker-high_supplier-unknown-unknown-unknown-unknown {
+  background-image: url('images/unknown.png');
+  width: 30px; 
+  height: 30px;
+}
+
+.custom-marker-low_supplier-unknown-unknown-is_not_main_supplier_sops-unknown {
+  background-image: url('images/unknown.png');
+  width: 20px; 
+  height: 20px;
+}
+
+.custom-marker-intermediate_supplier-unknown-unknown-is_not_main_supplier_sops-unknown {
+  background-image: url('images/unknown.png');
+  width: 25px; 
+  height: 25px;
+}
+
+.custom-marker-high_supplier-unknown-unknown-is_not_main_supplier_sops-unknown {
+  background-image: url('images/unknown.png');
+  width: 30px; 
+  height: 30px;
+}
 /* }
 .custom-marker-high_supplier-is_specialized-is_talens_specialized_order-is_main_supplier_sops-is_manufacturer {
   background-image: url('images/Specialized\ Yes\ -\ Sold\ as\ Specs\ -\ Is\ Manufacturer\ -\ Is\ Sops\ Supplier.png');
