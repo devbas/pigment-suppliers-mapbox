@@ -1033,11 +1033,50 @@ geojson.features.forEach(function(marker) {
   var el = document.createElement('div');
   el.className = classname;
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el)
+  var description = `<div class="info-outer-box">
+                      <div class="info-inner-box">
+                        <div class="title">${marker.properties.title}</div>
+                        <div class="data-points-list">
+                          <div class="data-point">
+                            <div class="value"></div>
+                            <div class="key">Manufacturer</div>
+                          </div>
+                          <div class="data-point">
+                            <div class="value"></div>
+                            <div class="key">Specialized</div>
+                          </div>
+                          <div class="data-point">
+                            <div class="value"></div>
+                            <div class="key">Specialized considered by Talens</div>
+                          </div>
+                          <div class="data-point">
+                            <div class="value"></div>
+                            <div class="key">Specialized SOPS</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>`
+  
+  if(marker.properties.title === 'Remmert') {
+    console.log(classname)
+  }
+
+  var popup = new mapboxgl.Popup()
     .setLngLat([marker.geometry.coordinates[1], marker.geometry.coordinates[0]])
-    // .setPopup(popup)
+    .setHTML(description)
     .addTo(map);
+
+  // make a marker for each feature and add to the map
+  var marker = new mapboxgl.Marker(el)
+    .setLngLat([marker.geometry.coordinates[1], marker.geometry.coordinates[0]])
+    .setPopup(popup)
+    .addTo(map);
+
+  
+
+  // marker.getElement().addEventListener('click', (el) => {
+  //   console.log('clicked', marker)
+  // });
 });
 
 
